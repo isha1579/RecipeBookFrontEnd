@@ -1,0 +1,47 @@
+<form *ngIf="!formSubmitted" [formGroup]="userLoginForm" (ngSubmit)="onSubmit()">
+  <h2>User Login</h2>
+  <div>
+    <label>Name:</label>
+    <input type="text" formControlName="name">
+  </div>
+  <div>
+    <label>Gender:</label>
+    <div>
+      <label>
+        <input type="radio" value="male" formControlName="gender">
+        Male
+      </label>
+      <label>
+        <input type="radio" value="female" formControlName="gender">
+        Female
+      </label>
+    </div>
+  </div>
+  <div>
+    <label>Age:</label>
+    <input type="number" formControlName="age">
+  </div>
+  <div>
+    <label>Email ID:</label>
+    <input type="email" formControlName="email">
+  </div>
+  <div>
+    <label>Username:</label>
+    <input type="text" formControlName="username">
+  </div>
+  <div>
+    <label>Password:</label>
+    <input type="password" formControlName="password">
+  </div>
+  <div>
+    <label>Country:</label>
+    <input type="text" formControlName="country">
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" formControlName="termsAccepted">
+      I accept the terms and conditions
+    </label>
+  </div>
+  <button type="submit" [disabled]="!userLoginForm.valid">Submit</button>
+</form>

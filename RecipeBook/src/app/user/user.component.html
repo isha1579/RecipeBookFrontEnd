@@ -1,0 +1,5 @@
+<input type="checkbox" [(ngModel)]="checkboxChecked"> Activate User Login Button
+
+<button *ngIf="checkboxChecked" (click)="navigateToUserLoginPage()">User Login</button>
+
+<app-user-login-page *ngIf="showForms"></app-user-login-page>

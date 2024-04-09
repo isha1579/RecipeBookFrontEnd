@@ -1,0 +1,31 @@
+<h2>Admin Panel</h2>
+
+<button (click)="getRecipes()">Get Recipes</button>
+
+<form>
+  <h3>Recipe Operation:</h3>
+  <label>ID:</label>
+  <input type="text" [(ngModel)]="recipeOperation.id" name="id"><br>
+  <label>Category:</label>
+  <input type="text" [(ngModel)]="recipeOperation.category" name="category"><br>
+  <label>Name:</label>
+  <input type="text" [(ngModel)]="recipeOperation.name" name="name"><br>
+  <label>Ingredients:</label>
+  <input type="text" [(ngModel)]="recipeOperation.ingredients" name="ingredients"><br>
+  <label>Procedure:</label>
+  <input type="text" [(ngModel)]="recipeOperation.procedure" name="procedure"><br>
+  <button type="button" (click)="addRecipe()">Add Recipe</button>
+  <button type="button" (click)="updateRecipe()">Update Recipe</button>
+  <button type="button" (click)="deleteRecipeById()">Delete Recipe</button>
+</form>
+
+<h3>Recipes:</h3>
+<ul>
+  <li *ngFor="let recipe of recipes">
+    <strong>ID:</strong> {{ recipe.id }},
+    <strong>Category:</strong> {{ recipe.category }},
+    <strong>Name:</strong> {{ recipe.name }},
+    <strong>Ingredients:</strong> {{ recipe.ingredients }},
+    <strong>Procedure:</strong> {{ recipe.procedure }}
+  </li>
+</ul>

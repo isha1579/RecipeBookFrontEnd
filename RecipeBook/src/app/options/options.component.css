@@ -1,0 +1,25 @@
+/* options.component.css */
+
+:host {
+    display: block;
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  li strong {
+    margin-right: 5px;
+  }
+  
